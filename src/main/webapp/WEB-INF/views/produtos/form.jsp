@@ -1,3 +1,5 @@
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <html>
 <head>
 <meta charset="UTF-8">
@@ -17,6 +19,15 @@
 	<div>
 		<label for="pages">Número de Páginas</label>
 		<input type="number" name="pages" id="pages"/>
+	</div>
+	<div>
+		<c:forEach items="${bookTypes}" var="bookType" varStatus="status">
+			<div>
+				<label for="preco_${bookType}">${bookType}</label>
+				<input type="text" name="prices[${status.index}].value" id="preco_${bookType}"/>
+				<input type="hidden" name="prices[${status.index}].bookType" value="${bookType}"/>
+			</div>
+		</c:forEach>
 	</div>
 	<div>
 		<input type="submit" value="Cadastrar"/>

@@ -36,7 +36,7 @@ public class JPAConfiguration {
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
 		dataSource.setUrl("jdbc:mysql://localhost:3306/casadocodigo?autoReconnect=true&useSSL=false");
 		dataSource.setUsername("root");
-		dataSource.setPassword("dudu");
+		dataSource.setPassword("");
 		return dataSource;
 	}
 	
