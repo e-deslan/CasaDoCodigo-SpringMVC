@@ -21,7 +21,7 @@
 		<input type="number" name="pages" id="pages"/>
 	</div>
 	<div>
-		<c:forEach items="${bookTypes}" var="bookType" varStatus="status">
+		<c:forEach items="${types}" var="bookType" varStatus="status">
 			<div>
 				<label for="preco_${bookType}">${bookType}</label>
 				<input type="text" name="prices[${status.index}].value" id="preco_${bookType}"/>
